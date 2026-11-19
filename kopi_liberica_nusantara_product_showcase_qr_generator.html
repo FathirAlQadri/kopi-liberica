@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Liberica Nusantara | The Rare Gem of Coffee</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- QRCode.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        espresso: '#1E130C',
+                        roast: '#2D1D14',
+                        crema: '#FAF6F0',
+                        latte: '#EFE6D8',
+                        terracotta: '#C86D44',
+                        gold: '#D4A359',
+                        sage: '#4A5D4E'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Kustomisasi scrollbar halus */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF6F0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C86D44;
+            border-radius: 9999px;
+        }
+        /* Pola latar belakang halus */
+        .bg-coffee-pattern {
+            background-image: radial-gradient(#D4A359 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-crema text-espresso font-sans antialiased selection:bg-terracotta selection:text-white">
+
+    <!-- Navbar Minimalis Mobile-First -->
+    <header class="sticky top-0 z-40 bg-espresso/95 backdrop-blur-md text-crema border-b border-gold/20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="w-9 h-9 rounded-xl bg-terracotta flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+                    <i data-lucide="coffee" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-lg tracking-wide block leading-none">KOPI LIBERICA</span>
+                    <span class="text-[10px] uppercase tracking-widest text-gold font-semibold">Nusantara Reserve</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-crema/80">
+                <a href="#keunikan" class="hover:text-gold transition-colors">Inovasi & Keunikan</a>
+                <a href="#profil-rasa" class="hover:text-gold transition-colors">Profil Rasa</a>
+                <a href="#panduan-seduh" class="hover:text-gold transition-colors">Panduan Seduh</a>
+            </nav>
+
+            <a href="#qr-generator" class="inline-flex items-center gap-1.5 bg-gold/20 hover:bg-gold text-gold hover:text-espresso border border-gold/40 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all">
+                <i data-lucide="qr-code" class="w-4 h-4"></i>
+                <span>QR Kemasan</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative bg-espresso text-crema overflow-hidden pt-12 pb-20 sm:py-24 px-4 sm:px-6">
+        <!-- Dekorasi cahaya ambient -->
+        <div class="absolute -top-24 -right-24 w-80 h-80 bg-terracotta/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-gold/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-roast border border-gold/30 text-gold text-xs font-semibold tracking-wide uppercase">
+                    <span class="w-2 h-2 rounded-full bg-terracotta animate-pulse"></span>
+                    <span>&lt; 2% Produksi Kopi Dunia</span>
+                </div>
+
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                    The Rare Gem of <span class="text-gold italic">Indonesian Coffee</span>
+                </h1>
+
+                <p class="text-crema/80 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    Temukan keajaiban <strong>Kopi Liberica Nusantara</strong>—varietas langka berbiji raksasa dengan aroma eksotis nangka matang, cokelat hitam, dan jejak kayu manis hutan tropis.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+                    <a href="#profil-rasa" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-terracotta hover:bg-[#b55c35] text-white font-semibold px-7 py-3.5 rounded-2xl shadow-lg shadow-terracotta/25 transition-all active:scale-95">
+                        <span>Jelajahi Profil Rasa</span>
+                        <i data-lucide="arrow-down-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#keunikan" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-roast hover:bg-roast/80 text-crema border border-crema/15 font-medium px-6 py-3.5 rounded-2xl transition-all">
+                        <span>Kenali Inovasinya</span>
+                    </a>
+                </div>
+
+                <!-- Statistik Cepat -->
+                <div class="grid grid-cols-3 gap-4 pt-6 border-t border-crema/10 max-w-md mx-auto lg:mx-0">
+                    <div>
+                        <p class="text-xl sm:text-2xl font-serif font-bold text-gold">2x</p>
+                        <p class="text-xs text-crema/60">Ukuran Biji Lebih Besar</p>
+                    </div>
+                    <div>
+                        <p class="text-xl sm:text-2xl font-serif font-bold text-gold">0–600</p>
+                        <p class="text-xs text-crema/60">mdpl Dataran Rendah</p>
+                    </div>
+                    <div>
+                        <p class="text-xl sm:text-2xl font-serif font-bold text-gold">100%</p>
+                        <p class="text-xs text-crema/60">Tahan Perubahan Iklim</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Kartu Produk Hero (Ilustrasi SVG Biji Liberica vs Arabika) -->
+            <div class="lg:col-span-5">
+                <div class="bg-gradient-to-br from-roast to-[#160D08] border border-gold/25 rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-xs font-semibold uppercase tracking-widest text-gold">Origin Spotlight</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-sage/30 text-emerald-300 text-xs font-medium border border-emerald-500/20">Single Origin</span>
+                    </div>
+
+                    <!-- Ilustrasi Perbandingan Biji Kopi SVG -->
+                    <div class="bg-espresso/70 rounded-2xl p-5 border border-crema/10 mb-6 flex items-center justify-around">
+                        <div class="text-center">
+                            <svg class="w-12 h-14 mx-auto text-crema/40 mb-2" viewBox="0 0 64 80" fill="none">
+                                <ellipse cx="32" cy="40" rx="18" ry="25" fill="currentColor"/>
+                                <path d="M32 16C29 30 35 50 32 64" stroke="#1E130C" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                            <span class="text-[11px] text-crema/60 block">Arabika</span>
+                            <span class="text-[10px] text-crema/40">~10-12 mm</span>
+                        </div>
+                        <div class="h-14 w-px bg-crema/10"></div>
+                        <div class="text-center">
+                            <svg class="w-16 h-20 mx-auto text-terracotta mb-1 drop-shadow-md" viewBox="0 0 80 100" fill="none">
+                                <path d="M40 8C60 8 72 28 68 56C64 82 50 92 36 92C20 92 10 74 14 48C18 22 24 8 40 8Z" fill="currentColor"/>
+                                <path d="M41 10C34 34 48 64 37 90" stroke="#1E130C" stroke-width="3.5" stroke-linecap="round"/>
+                            </svg>
+                            <span class="text-xs font-bold text-gold block">Liberica</span>
+                            <span class="text-[11px] text-crema/80">18–22 mm (Asimetris)</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2.5">
+                        <h3 class="font-serif text-xl font-bold text-crema">Liberica Heritage Roast</h3>
+                        <p class="text-xs sm:text-sm text-crema/70 leading-relaxed">
+                            Dipanen selektif (petik merah) dari lahan gambut & dataran rendah Nusantara, diproses dengan metode <strong>Anaerobic Honey</strong> untuk mengunci manis alami buah tropis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. KEUNIKAN & INOVASI (WHY LIBERICA?) -->
+    <section id="keunikan" class="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+            <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Keunikan & Inovasi Produk</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso">Mengapa Kopi Liberica?</h2>
+            <p class="text-sm sm:text-base text-espresso/75">
+                Klik setiap pilar di bawah untuk memahami keunggulan agronomis, keberlanjutan, dan inovasi pascapanen produk kami.
+            </p>
+        </div>
+
+        <!-- Kartu Interaktif 3 Pilar -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="innovation-cards">
+            <!-- Pilar 1 -->
+            <div onclick="toggleCardDetail(0)" class="innovation-card cursor-pointer bg-white rounded-3xl p-6 sm:p-7 border-2 border-terracotta shadow-lg transition-all duration-300">
+                <div class="w-12 h-12 rounded-2xl bg-terracotta/15 text-terracotta flex items-center justify-center mb-5">
+                    <i data-lucide="sparkles" class="w-6 h-6"></i>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="font-serif text-xl font-bold text-espresso">Biji Raksasa & Asimetris</h3>
+                    <span class="text-xs font-semibold text-terracotta bg-terracotta/10 px-2.5 py-1 rounded-full">Morfologi</span>
+                </div>
+                <p class="text-sm text-espresso/75 leading-relaxed mb-4">
+                    Memiliki ukuran biji terbesar di antara spesies kopi komersial dengan bentuk lonjong asimetris (menyerupai tetesan air) dan kulit ari tebal.
+                </p>
+                <div class="card-extra pt-4 border-t border-latte text-xs text-espresso/80 space-y-1.5">
+                    <p class="font-semibold text-terracotta">💡 Nilai Tambah Produk:</p>
+                    <p>Membutuhkan profil sangrai (roasting) khusus bersuhu stabil agar panas menembus inti biji secara merata tanpa membakar permukaan luar.</p>
+                </div>
+            </div>
+
+            <!-- Pilar 2 -->
+            <div onclick="toggleCardDetail(1)" class="innovation-card cursor-pointer bg-white/80 hover:bg-white rounded-3xl p-6 sm:p-7 border-2 border-latte hover:border-sage/50 shadow-sm transition-all duration-300">
+                <div class="w-12 h-12 rounded-2xl bg-sage/15 text-sage flex items-center justify-center mb-5">
+                    <i data-lucide="sprout" class="w-6 h-6"></i>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="font-serif text-xl font-bold text-espresso">Ketahanan Iklim & Hama</h3>
+                    <span class="text-xs font-semibold text-sage bg-sage/10 px-2.5 py-1 rounded-full">Sustainability</span>
+                </div>
+                <p class="text-sm text-espresso/75 leading-relaxed mb-4">
+                    Akar tunggang yang dalam membuat tanaman Liberica sangat tangguh terhadap kekeringan, lahan gambut, dan penyakit karat daun (<em>Hemileia vastatrix</em>).
+                </p>
+                <div class="card-extra hidden pt-4 border-t border-latte text-xs text-espresso/80 space-y-1.5">
+                    <p class="font-semibold text-sage">🌱 Dampak Ekologis:</p>
+                    <p>Menjadi solusi masa depan industri kopi menghadapi pemanasan global sekaligus memberdayakan petani kopi dataran rendah di Indonesia.</p>
+                </div>
+            </div>
+
+            <!-- Pilar 3 -->
+            <div onclick="toggleCardDetail(2)" class="innovation-card cursor-pointer bg-white/80 hover:bg-white rounded-3xl p-6 sm:p-7 border-2 border-latte hover:border-gold/60 shadow-sm transition-all duration-300">
+                <div class="w-12 h-12 rounded-2xl bg-gold/20 text-amber-800 flex items-center justify-center mb-5">
+                    <i data-lucide="flask-conical" class="w-6 h-6"></i>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="font-serif text-xl font-bold text-espresso">Inovasi Honey Process</h3>
+                    <span class="text-xs font-semibold text-amber-800 bg-gold/20 px-2.5 py-1 rounded-full">Pascapanen</span>
+                </div>
+                <p class="text-sm text-espresso/75 leading-relaxed mb-4">
+                    Fermentasi terkontrol dengan mempertahankan lapisan lendir buah (<em>mucilage</em>) selama penjemuran di atas <em>raised bed</em> selama 14–21 hari.
+                </p>
+                <div class="card-extra hidden pt-4 border-t border-latte text-xs text-espresso/80 space-y-1.5">
+                    <p class="font-semibold text-amber-800">🍯 Hasil Eksplorasi:</p>
+                    <p>Mengurangi karakter <em>woody</em> yang terlalu tajam dan menonjolkan rasa manis kompleks seperti nangka matang dan madu hutan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PROFIL RASA (INTERACTIVE TASTING NOTES & ATTRIBUTES) -->
+    <section id="profil-rasa" class="py-16 sm:py-24 bg-latte/70 border-y border-espresso/10 px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Sensory & Flavor Profile</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso">Eksplorasi Roda Rasa Liberica</h2>
+                <p class="text-sm sm:text-base text-espresso/75">
+                    Pilih catatan rasa (<em>tasting notes</em>) di bawah ini untuk melihat deskripsi sensorik serta intensitas karakteristik seduhannya.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-espresso/5 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Pemilih Tasting Notes (Kiri) -->
+                <div class="lg:col-span-6 space-y-4">
+                    <p class="text-xs font-bold uppercase tracking-wider text-espresso/50">Pilih Catatan Aroma & Rasa:</p>
+                    <div class="flex flex-wrap gap-2.5" id="flavor-buttons">
+                        <button onclick="selectFlavor('jackfruit')" data-flavor="jackfruit" class="flavor-btn active px-4 py-2.5 rounded-2xl text-sm font-semibold flex items-center gap-2 transition-all bg-espresso text-gold shadow-md">
+                            <span>🍈</span> Jackfruit (Nangka)
+                        </button>
+                        <button onclick="selectFlavor('chocolate')" data-flavor="chocolate" class="flavor-btn px-4 py-2.5 rounded-2xl text-sm font-semibold flex items-center gap-2 transition-all bg-crema text-espresso hover:bg-latte">
+                            <span>🍫</span> Dark Chocolate
+                        </button>
+                        <button onclick="selectFlavor('woody')" data-flavor="woody" class="flavor-btn px-4 py-2.5 rounded-2xl text-sm font-semibold flex items-center gap-2 transition-all bg-crema text-espresso hover:bg-latte">
+                            <span>🪵</span> Warm Woody & Spice
+                        </button>
+                        <button onclick="selectFlavor('floral')" data-flavor="floral" class="flavor-btn px-4 py-2.5 rounded-2xl text-sm font-semibold flex items-center gap-2 transition-all bg-crema text-espresso hover:bg-latte">
+                            <span>🌸</span> Tropical Floral
+                        </button>
+                        <button onclick="selectFlavor('smoky')" data-flavor="smoky" class="flavor-btn px-4 py-2.5 rounded-2xl text-sm font-semibold flex items-center gap-2 transition-all bg-crema text-espresso hover:bg-latte">
+                            <span>🔥</span> Sweet Smoky
+                        </button>
+                    </div>
+
+                    <!-- Kartu Penjelasan Flavor Aktif -->
+                    <div id="flavor-detail-box" class="bg-crema rounded-2xl p-5 border border-gold/30 mt-4 transition-all">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span id="flavor-emoji" class="text-3xl">🍈</span>
+                            <div>
+                                <h3 id="flavor-title" class="font-serif text-xl font-bold text-espresso">Jackfruit (Nangka Matang)</h3>
+                                <span id="flavor-tag" class="text-xs font-medium text-terracotta">Signature Aroma Utama</span>
+                            </div>
+                        </div>
+                        <p id="flavor-desc" class="text-sm text-espresso/80 leading-relaxed">
+                            Ciri khas paling ikonik dari Kopi Liberica. Saat diseduh, uap kopi langsung memancarkan aroma buah nangka matang yang manis dan tropis, memberikan sensasi eksotis yang tidak dimiliki Arabika maupun Robusta.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Indikator Bar Sensorik (Kanan) -->
+                <div class="lg:col-span-6 bg-espresso text-crema rounded-3xl p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center justify-between border-b border-crema/10 pb-4">
+                        <div>
+                            <h4 class="font-serif text-lg font-bold text-gold">Karakteristik Cangkir</h4>
+                            <p class="text-xs text-crema/60">Profil Sensorik Standar SCAA</p>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-terracotta/20 text-terracotta border border-terracotta/30 text-xs font-bold">
+                            Medium-Dark Roast
+                        </span>
+                    </div>
+
+                    <!-- Bar 1: Body -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span class="font-medium flex items-center gap-2"><i data-lucide="droplets" class="w-4 h-4 text-gold"></i> Body (Kekentalan)</span>
+                            <span id="stat-body-label" class="font-bold text-gold">Tinggi (4.5 / 5)</span>
+                        </div>
+                        <div class="w-full h-3 bg-roast rounded-full overflow-hidden p-0.5">
+                            <div id="stat-body-bar" class="h-full bg-gradient-to-r from-terracotta to-gold rounded-full transition-all duration-500" style="width: 90%"></div>
+                        </div>
+                        <p class="text-[11px] text-crema/60">Tekstur tebal, <em>velvety</em>, dan membalut langit-langit mulut dengan lembut.</p>
+                    </div>
+
+                    <!-- Bar 2: Sweetness -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span class="font-medium flex items-center gap-2"><i data-lucide="candy" class="w-4 h-4 text-gold"></i> Sweetness (Kemanisan)</span>
+                            <span id="stat-sweet-label" class="font-bold text-gold">Tinggi (4.2 / 5)</span>
+                        </div>
+                        <div class="w-full h-3 bg-roast rounded-full overflow-hidden p-0.5">
+                            <div id="stat-sweet-bar" class="h-full bg-gradient-to-r from-terracotta to-gold rounded-full transition-all duration-500" style="width: 84%"></div>
+                        </div>
+                        <p class="text-[11px] text-crema/60">Manis alami buah tropis dan karamel gula aren pada akhir tegukan (<em>aftertaste</em>).</p>
+                    </div>
+
+                    <!-- Bar 3: Acidity -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span class="font-medium flex items-center gap-2"><i data-lucide="citrus" class="w-4 h-4 text-gold"></i> Acidity (Keasaman)</span>
+                            <span id="stat-acid-label" class="font-bold text-gold">Rendah–Sedang (2.5 / 5)</span>
+                        </div>
+                        <div class="w-full h-3 bg-roast rounded-full overflow-hidden p-0.5">
+                            <div id="stat-acid-bar" class="h-full bg-gradient-to-r from-terracotta to-gold rounded-full transition-all duration-500" style="width: 50%"></div>
+                        </div>
+                        <p class="text-[11px] text-crema/60">Keasaman lembut yang ramah di lambung, seimbang dengan karakter cokelatnya.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PANDUAN PENYEDUHAN (BREWING GUIDE INTERAKTIF) -->
+    <section id="panduan-seduh" class="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+            <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Barista Recommendation</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso">Panduan Seduh Sempurna</h2>
+            <p class="text-sm sm:text-base text-espresso/75">
+                Pilih metode penyeduhan favorit Anda untuk mendapatkan takaran rasio, suhu air, dan durasi ekstraksi terbaik.
+            </p>
+        </div>
+
+        <!-- Tab Metode Seduh -->
+        <div class="flex justify-center gap-2 sm:gap-4 mb-8">
+            <button onclick="selectBrew('v60')" id="tab-v60" class="brew-tab px-5 py-3 rounded-2xl text-sm font-bold transition-all bg-espresso text-gold shadow-md flex items-center gap-2">
+                <i data-lucide="filter" class="w-4 h-4"></i>
+                <span>V60 Pour Over</span>
+            </button>
+            <button onclick="selectBrew('tubruk')" id="tab-tubruk" class="brew-tab px-5 py-3 rounded-2xl text-sm font-bold transition-all bg-white text-espresso border border-latte hover:border-terracotta flex items-center gap-2">
+                <i data-lucide="cup-soda" class="w-4 h-4"></i>
+                <span>Kopi Tubruk</span>
+            </button>
+            <button onclick="selectBrew('coldbrew')" id="tab-coldbrew" class="brew-tab px-5 py-3 rounded-2xl text-sm font-bold transition-all bg-white text-espresso border border-latte hover:border-terracotta flex items-center gap-2">
+                <i data-lucide="snowflake" class="w-4 h-4"></i>
+                <span>Cold Brew</span>
+            </button>
+        </div>
+
+        <!-- Konten Resep Seduh -->
+        <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-lg border border-latte">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-crema p-4 rounded-2xl border border-latte text-center">
+                    <i data-lucide="scale" class="w-5 h-5 text-terracotta mx-auto mb-1.5"></i>
+                    <span class="text-xs text-espresso/60 block">Rasio Kopi : Air</span>
+                    <strong id="brew-ratio" class="text-lg font-serif font-bold text-espresso">1 : 15 (15g : 225ml)</strong>
+                </div>
+                <div class="bg-crema p-4 rounded-2xl border border-latte text-center">
+                    <i data-lucide="thermometer" class="w-5 h-5 text-terracotta mx-auto mb-1.5"></i>
+                    <span class="text-xs text-espresso/60 block">Suhu Air</span>
+                    <strong id="brew-temp" class="text-lg font-serif font-bold text-espresso">90°C – 92°C</strong>
+                </div>
+                <div class="bg-crema p-4 rounded-2xl border border-latte text-center">
+                    <i data-lucide="timer" class="w-5 h-5 text-terracotta mx-auto mb-1.5"></i>
+                    <span class="text-xs text-espresso/60 block">Waktu Seduh</span>
+                    <strong id="brew-time" class="text-lg font-serif font-bold text-espresso">02:30 Menit</strong>
+                </div>
+                <div class="bg-crema p-4 rounded-2xl border border-latte text-center">
+                    <i data-lucide="settings-2" class="w-5 h-5 text-terracotta mx-auto mb-1.5"></i>
+                    <span class="text-xs text-espresso/60 block">Ukuran Gilingan</span>
+                    <strong id="brew-grind" class="text-lg font-serif font-bold text-espresso">Medium (Gula Pasir)</strong>
+                </div>
+            </div>
+
+            <div class="bg-espresso/5 rounded-2xl p-5 sm:p-6">
+                <h4 id="brew-steps-title" class="font-serif text-lg font-bold text-espresso mb-3">Langkah Penyeduhan V60:</h4>
+                <ol id="brew-steps-list" class="list-decimal list-inside space-y-2 text-sm text-espresso/85 leading-relaxed">
+                    <li>Bilas kertas filter V60 dengan air panas untuk menghilangkan rasa kertas dan menghangatkan server.</li>
+                    <li>Masukkan 15 gram bubuk Kopi Liberica gilingan medium, ratakan permukaannya.</li>
+                    <li><strong>Blooming (00:00 - 00:40):</strong> Tuang 45 ml air bersuhu 91°C secara melingkar, diamkan agar gas CO2 keluar dan aroma nangka terlepas.</li>
+                    <li><strong>Tuangan Kedua (00:40 - 01:30):</strong> Tuang perlahan hingga total 150 ml dengan gerakan melingkar dari tengah ke luar.</li>
+                    <li><strong>Tuangan Akhir (01:30 - 02:30):</strong> Selesaikan tuangan hingga 225 ml, tunggu hingga seluruh air turun sempurna dan sajikan selagi hangat.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. GENERATOR QR CODE BAWAAN (FITUR KHUSUS TUGAS PRODUCT DEVELOPMENT) -->
+    <section id="qr-generator" class="py-16 sm:py-24 bg-espresso text-crema px-4 sm:px-6 bg-coffee-pattern">
+        <div class="max-w-4xl mx-auto bg-roast/95 backdrop-blur-md border border-gold/30 rounded-3xl p-6 sm:p-10 shadow-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-7 space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-terracotta/20 border border-terracotta/40 text-terracotta text-xs font-bold uppercase tracking-wider">
+                        <i data-lucide="package-check" class="w-4 h-4"></i>
+                        <span>Packaging Integration Tool</span>
+                    </div>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-gold">Buat QR Code Kemasan Produk</h2>
+                    <p class="text-sm text-crema/80 leading-relaxed">
+                        Gunakan generator bawaan ini untuk mencetak QR Code yang langsung mengarah ke halaman informasi produk ini. Tempelkan pada kemasan pouch kopi atau <em>booth</em> pameran tugas <em>Product Development</em> Anda!
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <label for="qr-url-input" class="block text-xs font-semibold uppercase tracking-wider text-gold">
+                            URL Halaman Web / Link Hosting Anda:
+                        </label>
+                        <div class="flex flex-col sm:flex-row gap-2.5">
+                            <input
+                                type="url"
+                                id="qr-url-input"
+                                placeholder="https://kopi-liberica-nusantara.vercel.app"
+                                class="flex-1 bg-espresso border border-crema/20 focus:border-gold rounded-xl px-4 py-3 text-sm text-crema placeholder:text-crema/35 focus:outline-none"
+                            >
+                            <button
+                                onclick="generateCustomQR()"
+                                class="bg-gold hover:bg-[#e0b268] text-espresso font-bold px-5 py-3 rounded-xl text-sm transition-all active:scale-95 whitespace-nowrap"
+                            >
+                                Perbarui QR
+                            </button>
+                        </div>
+                        <p id="qr-helper-text" class="text-[11px] text-crema/55">
+                            *Otomatis mendeteksi URL halaman saat ini. Anda bisa menggantinya dengan link hosting (Netlify/Vercel/GitHub Pages) sebelum mengunduh.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Kotak Pratinjau & Tombol Unduh QR -->
+                <div class="md:col-span-5 flex flex-col items-center justify-center bg-crema text-espresso rounded-2xl p-6 shadow-inner">
+                    <span class="text-[11px] font-bold uppercase tracking-widest text-terracotta mb-3">Scan Untuk Info Produk</span>
+                    
+                    <!-- Wadah Canvas QRCode.js -->
+                    <div id="qrcode-container" class="p-3 bg-white rounded-xl shadow-md border border-espresso/10 flex items-center justify-center"></div>
+                    
+                    <p class="font-serif font-bold text-sm mt-3 text-espresso">Kopi Liberica Nusantara</p>
+                    <p class="text-[10px] text-espresso/60 mb-4">Single Origin • Rare Heritage</p>
+
+                    <button
+                        onclick="downloadQRCode()"
+                        class="w-full inline-flex items-center justify-center gap-2 bg-espresso hover:bg-roast text-gold font-semibold py-2.5 px-4 rounded-xl text-xs sm:text-sm transition-all shadow-md active:scale-95"
+                    >
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        <span>Unduh QR Code (PNG)</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#140C07] text-crema/60 py-8 px-4 text-center text-xs border-t border-crema/10">
+        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="font-serif text-crema/80 font-semibold">Kopi Liberica Nusantara — Product Development Showcase</p>
+            <p>Didesain untuk Edukasi & Promosi Kopi Spesialti Indonesia</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification (Pengganti alert()) -->
+    <div id="toast-box" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-espresso text-crema border border-gold/40 px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 text-sm">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold shrink-0"></i>
+            <span id="toast-message">Pesan notifikasi</span>
+        </div>
+    </div>
+
+    <script>
+        // Inisialisasi ikon Lucide
+        lucide.createIcons();
+
+        // Fungsi menampilkan notifikasi Toast halus (tanpa alert)
+        function showToast(message) {
+            const toast = document.getElementById('toast-box');
+            const msgEl = document.getElementById('toast-message');
+            msgEl.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3200);
+        }
+
+        // --- LOGIKA BAGIAN 2: KARTU KEUNIKAN & INOVASI ---
+        function toggleCardDetail(selectedIndex) {
+            const cards = document.querySelectorAll('.innovation-card');
+            cards.forEach((card, index) => {
+                const extra = card.querySelector('.card-extra');
+                if (index === selectedIndex) {
+                    extra.classList.remove('hidden');
+                    card.classList.remove('bg-white/80', 'border-latte', 'shadow-sm');
+                    card.classList.add('bg-white', 'border-terracotta', 'shadow-lg');
+                } else {
+                    extra.classList.add('hidden');
+                    card.classList.add('bg-white/80', 'border-latte', 'shadow-sm');
+                    card.classList.remove('bg-white', 'border-terracotta', 'shadow-lg');
+                }
+            });
+        }
+
+        // --- LOGIKA BAGIAN 3: PROFIL RASA INTERAKTIF ---
+        const flavorData = {
+            jackfruit: {
+                emoji: '🍈',
+                title: 'Jackfruit (Nangka Matang)',
+                tag: 'Signature Aroma Utama',
+                desc: 'Ciri khas paling ikonik dari Kopi Liberica. Saat diseduh, uap kopi langsung memancarkan aroma buah nangka matang yang manis dan tropis, memberikan sensasi eksotis yang tidak dimiliki Arabika maupun Robusta.',
+                body: { label: 'Tinggi (4.5 / 5)', width: '90%' },
+                sweet: { label: 'Tinggi (4.4 / 5)', width: '88%' },
+                acid: { label: 'Sedang (2.8 / 5)', width: '56%' }
+            },
+            chocolate: {
+                emoji: '🍫',
+                title: 'Dark Chocolate & Cocoa',
+                tag: 'Fondasi Rasa Utama',
+                desc: 'Memberikan kesan pahit yang elegan layaknya cokelat hitam 70%. Sangat cocok dinikmati sebagai kopi hitam murni maupun dipadukan dengan susu nabati atau gula aren.',
+                body: { label: 'Sangat Tinggi (4.8 / 5)', width: '96%' },
+                sweet: { label: 'Sedang-Tinggi (3.8 / 5)', width: '76%' },
+                acid: { label: 'Rendah (2.0 / 5)', width: '40%' }
+            },
+            woody: {
+                emoji: '🪵',
+                title: 'Warm Woody & Spices',
+                tag: 'Karakter Terroir Dataran Rendah',
+                desc: 'Jejak aroma kayu manis, cengkih ringan, dan kayu hutan hujan tropis yang hangat. Karakter ini lahir dari adaptasi unik pohon Liberica di tanah gambut kaya mineral.',
+                body: { label: 'Tinggi (4.6 / 5)', width: '92%' },
+                sweet: { label: 'Sedang (3.4 / 5)', width: '68%' },
+                acid: { label: 'Rendah (2.2 / 5)', width: '44%' }
+            },
+            floral: {
+                emoji: '🌸',
+                title: 'Tropical Floral & Honey',
+                tag: 'Hasil Inovasi Honey Process',
+                desc: 'Sentuhan aroma bunga melati hutan dan madu yang lembut muncul pada suhu hangat menuju dingin (cooling down), membuktikan bahwa Liberica memiliki kompleksitas kelas spesialti.',
+                body: { label: 'Sedang-Tinggi (4.0 / 5)', width: '80%' },
+                sweet: { label: 'Sangat Tinggi (4.7 / 5)', width: '94%' },
+                acid: { label: 'Sedang (3.2 / 5)', width: '64%' }
+            },
+            smoky: {
+                emoji: '🔥',
+                title: 'Sweet Smoky & Caramel',
+                tag: 'Aftertaste Panjang',
+                desc: 'Sensasi asap kayu manis yang bersih dan tidak getir, berpadu dengan karamelisasi gula alami biji saat proses sangrai medium-dark.',
+                body: { label: 'Sangat Tinggi (4.9 / 5)', width: '98%' },
+                sweet: { label: 'Tinggi (4.0 / 5)', width: '80%' },
+                acid: { label: 'Sangat Rendah (1.8 / 5)', width: '36%' }
+            }
+        };
+
+        function selectFlavor(key) {
+            const data = flavorData[key];
+            if (!data) return;
+
+            // Update tombol aktif
+            document.querySelectorAll('.flavor-btn').forEach(btn => {
+                if (btn.dataset.flavor === key) {
+                    btn.className = 'flavor-btn active px-4 py-2.5 rounded-2xl text-sm font-semibold flex items-center gap-2 transition-all bg-espresso text-gold shadow-md';
+                } else {
+                    btn.className = 'flavor-btn px-4 py-2.5 rounded-2xl text-sm font-semibold flex items-center gap-2 transition-all bg-crema text-espresso hover:bg-latte';
+                }
+            });
+
+            // Update detail flavor
+            document.getElementById('flavor-emoji').textContent = data.emoji;
+            document.getElementById('flavor-title').textContent = data.title;
+            document.getElementById('flavor-tag').textContent = data.tag;
+            document.getElementById('flavor-desc').textContent = data.desc;
+
+            // Update indikator bar
+            document.getElementById('stat-body-label').textContent = data.body.label;
+            document.getElementById('stat-body-bar').style.width = data.body.width;
+
+            document.getElementById('stat-sweet-label').textContent = data.sweet.label;
+            document.getElementById('stat-sweet-bar').style.width = data.sweet.width;
+
+            document.getElementById('stat-acid-label').textContent = data.acid.label;
+            document.getElementById('stat-acid-bar').style.width = data.acid.width;
+        }
+
+        // --- LOGIKA BAGIAN 4: PANDUAN PENYEDUHAN ---
+        const brewData = {
+            v60: {
+                ratio: '1 : 15 (15g : 225ml)',
+                temp: '90°C – 92°C',
+                time: '02:30 Menit',
+                grind: 'Medium (Gula Pasir)',
+                title: 'Langkah Penyeduhan V60 Pour Over:',
+                steps: [
+                    'Bilas kertas filter V60 dengan air panas untuk menghilangkan rasa kertas dan menghangatkan server.',
+                    'Masukkan 15 gram bubuk Kopi Liberica gilingan medium, ratakan permukaannya.',
+                    '<strong>Blooming (00:00 - 00:40):</strong> Tuang 45 ml air bersuhu 91°C secara melingkar, diamkan agar gas CO2 keluar dan aroma nangka terlepas.',
+                    '<strong>Tuangan Kedua (00:40 - 01:30):</strong> Tuang perlahan hingga total 150 ml dengan gerakan melingkar dari tengah ke luar.',
+                    '<strong>Tuangan Akhir (01:30 - 02:30):</strong> Selesaikan tuangan hingga 225 ml, tunggu hingga seluruh air turun sempurna dan sajikan selagi hangat.'
+                ]
+            },
+            tubruk: {
+                ratio: '1 : 14 (12g : 170ml)',
+                temp: '93°C – 95°C',
+                time: '04:00 Menit',
+                grind: 'Medium-Fine (Halus)',
+                title: 'Langkah Penyeduhan Kopi Tubruk Nusantara:',
+                steps: [
+                    'Siapkan 12 gram bubuk Kopi Liberica gilingan medium-fine ke dalam cangkir keramik.',
+                    'Tuangkan 170 ml air panas (diamkan 30 detik setelah mendidih agar suhu di kisaran 94°C).',
+                    'Aduk perlahan sebanyak 5 kali putaran hingga seluruh bubuk kopi terbasahi merata.',
+                    'Diamkan selama 4 menit agar ampas kopi mengendap sempurna di dasar cangkir dan tekstur <em>body</em> terbentuk maksimal.',
+                    'Nikmati aroma manis alami nangka dan cokelat hitam tanpa perlu tambahan gula.'
+                ]
+            },
+            coldbrew: {
+                ratio: '1 : 10 (50g : 500ml)',
+                temp: 'Air Suhu Ruang / Dingin',
+                time: '12 – 16 Jam',
+                grind: 'Coarse (Garam Kasar)',
+                title: 'Langkah Penyeduhan Cold Brew Konsentrat:',
+                steps: [
+                    'Masukkan 50 gram bubuk Kopi Liberica gilingan kasar ke dalam botol kaca atau <em>french press</em>.',
+                    'Tuangkan 500 ml air mineral suhu ruang secara perlahan, lalu aduk hingga semua bubuk terendam.',
+                    'Tutup rapat wadah dan simpan di dalam lemari pendingin selama 12 hingga 16 jam.',
+                    'Saring menggunakan kertas filter atau kain saring halus untuk menghasilkan cairan kopi yang bersih dan bebas ampas.',
+                    'Sajikan dengan es batu, atau tambahkan sedikit susu/air kelapa muda untuk kesegaran tropis maksimal.'
+                ]
+            }
+        };
+
+        function selectBrew(method) {
+            const data = brewData[method];
+            if (!data) return;
+
+            // Update gaya tab
+            ['v60', 'tubruk', 'coldbrew'].forEach(id => {
+                const tab = document.getElementById('tab-' + id);
+                if (id === method) {
+                    tab.className = 'brew-tab px-5 py-3 rounded-2xl text-sm font-bold transition-all bg-espresso text-gold shadow-md flex items-center gap-2';
+                } else {
+                    tab.className = 'brew-tab px-5 py-3 rounded-2xl text-sm font-bold transition-all bg-white text-espresso border border-latte hover:border-terracotta flex items-center gap-2';
+                }
+            });
+
+            // Update nilai parameter
+            document.getElementById('brew-ratio').textContent = data.ratio;
+            document.getElementById('brew-temp').textContent = data.temp;
+            document.getElementById('brew-time').textContent = data.time;
+            document.getElementById('brew-grind').textContent = data.grind;
+            document.getElementById('brew-steps-title').textContent = data.title;
+
+            const listEl = document.getElementById('brew-steps-list');
+            listEl.innerHTML = data.steps.map(step => `<li>${step}</li>`).join('');
+        }
+
+        // --- LOGIKA BAGIAN 5: GENERATOR QR CODE BAWAAN ---
+        let qrCodeInstance = null;
+
+        function initQRCode() {
+            const inputEl = document.getElementById('qr-url-input');
+            // Gunakan URL halaman saat ini jika valid http/https, jika dibuka lokal (file://) gunakan contoh URL produk
+            const currentUrl = window.location.href;
+            const defaultUrl = currentUrl.startsWith('http') ? currentUrl : 'https://kopi-liberica-nusantara.id';
+            inputEl.value = defaultUrl;
+            renderQR(defaultUrl);
+        }
+
+        function renderQR(text) {
+            const container = document.getElementById('qrcode-container');
+            container.innerHTML = ''; // Bersihkan QR sebelumnya
+            qrCodeInstance = new QRCode(container, {
+                text: text,
+                width: 176,
+                height: 176,
+                colorDark: '#1E130C',
+                colorLight: '#FFFFFF',
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        }
+
+        function generateCustomQR() {
+            const inputVal = document.getElementById('qr-url-input').value.trim();
+            if (!inputVal) {
+                showToast('Masukkan tautan URL terlebih dahulu!');
+                return;
+            }
+            renderQR(inputVal);
+            showToast('QR Code berhasil diperbarui!');
+        }
+
+        function downloadQRCode() {
+            const container = document.getElementById('qrcode-container');
+            const canvas = container.querySelector('canvas');
+            const img = container.querySelector('img');
+
+            let dataUrl = '';
+            if (canvas) {
+                dataUrl = canvas.toDataURL('image/png');
+            } else if (img && img.src) {
+                dataUrl = img.src;
+            }
+
+            if (!dataUrl) {
+                showToast('Gagal memproses gambar QR Code.');
+                return;
+            }
+
+            const link = document.createElement('a');
+            link.href = dataUrl;
+            link.download = 'QR-Kopi-Liberica-Nusantara.png';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            showToast('File QR-Kopi-Liberica-Nusantara.png diunduh!');
+        }
+
+        // Jalankan saat halaman selesai dimuat
+        window.addEventListener('DOMContentLoaded', () => {
+            initQRCode();
+        });
+    </script>
+</body>
+</html>
